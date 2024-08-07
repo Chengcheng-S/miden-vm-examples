@@ -1,5 +1,5 @@
 [package]
-name = "test_code"
+name = "miden-vm-examples"
 version = "0.1.0"
 edition = "2021"
 
