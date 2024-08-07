@@ -290,6 +290,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "miden-vm-examples"
+version = "0.1.0"
+dependencies = [
+ "miden-processor",
+ "miden-vm",
+]
+
+[[package]]
 name = "num"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -475,14 +483,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
-]
-
-[[package]]
-name = "test_code"
-version = "0.1.0"
-dependencies = [
- "miden-processor",
- "miden-vm",
 ]
 
 [[package]]
