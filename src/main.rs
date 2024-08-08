@@ -1,9 +1,11 @@
-use miden_vm::{execute_iter, prove, verify, Assembler, DefaultHost, ProvingOptions, StackInputs};
+use miden_vm::{execute_iter, verify, DefaultHost, ProvingOptions, StackInputs};
+use miden_prover::prove;
+use miden_assembly::Assembler;
 
 fn main() {
     let assember = Assembler::default();
     let program = assember
-        .compile(
+        .assemble_program(
             r#"
             begin push.2 push.7 add end
         "#,
