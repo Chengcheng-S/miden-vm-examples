@@ -5,5 +5,20 @@ edition = "2021"
 
 [dependencies]
 # features metal
-miden-vm={verison = "0.9.1",git = "https://github.com/0xPolygonMiden/miden-vm.git",default-features = false}
-miden-processor = { version = "0.9.1",git = "https://github.com/0xPolygonMiden/miden-vm.git", default-features = false }
+miden-vm={verison = "0.10.0", git = "https://github.com/0xPolygonMiden/miden-vm.git", default-features = false}
+miden-processor = { version = "0.10.0", git = "https://github.com/0xPolygonMiden/miden-vm.git", default-features = false }
+miden-assembly = { version = "0.10.0", git = "https://github.com/0xPolygonMiden/miden-vm.git", default-features = false }
+miden-prover = { version = "0.10.0", git = "https://github.com/0xPolygonMiden/miden-vm.git", default-features = false }
+
+
+
+[features]
+metal = [
+    "miden-prover/metal",
+]
+
+
+[profile.optimized]
+inherits = "release"
+codegen-units = 1
+lto = true
