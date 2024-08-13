@@ -31,6 +31,8 @@ fn main() {
         prove(&program, stack_input.clone(), &mut host, prove_options).unwrap();
 
     println!("program_outputs: {:?}", &program_outputs);
+    println!("proofs hash fn: {:?}\nsecurity level:{}", &proofs.hash_fn(),&proofs.security_level());
+
     // println!("proofs: {:?}", &proofs.proof.fri_proof);
 
     let security_level =
